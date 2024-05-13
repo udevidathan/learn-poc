@@ -47,6 +47,9 @@
       "limit": "10 KB"
     }
   ],
+  "dependencies": {
+    "mbo-utils": "^0.0.5"
+  },
   "devDependencies": {
     "@size-limit/preset-small-lib": "^11.1.3",
     "@types/react": "^18.3.2",
