@@ -1,5 +1,5 @@
 {
-  "version": "0.0.5",
+  "version": "0.0.6",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -48,7 +48,7 @@
     }
   ],
   "dependencies": {
-    "mbo-utils": "^0.0.5"
+    "mbo-utils": "^0.0.6"
   },
   "devDependencies": {
     "@size-limit/preset-small-lib": "^11.1.3",
