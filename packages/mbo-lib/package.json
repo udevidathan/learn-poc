@@ -1,5 +1,5 @@
 {
-  "version": "0.0.8",
+  "version": "0.0.9",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -49,7 +49,7 @@
   ],
   "dependencies": {
     "@rollup/plugin-replace": "^5.0.2",
-    "mbo-utils": "^0.0.8",
+    "mbo-utils": "^0.0.9",
     "mf-core-library-v2": "0.7.69",
     "prettier": "^3.2.5"
   },
