@@ -1,5 +1,5 @@
 {
-  "version": "0.0.8",
+  "version": "0.1.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -33,39 +33,26 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "mbo-lib",
-  "private": false,
+  "name": "app3",
   "author": "udevidathan",
-  "module": "dist/mbo-lib.esm.js",
+  "module": "dist/app3.esm.js",
   "size-limit": [
     {
-      "path": "dist/mbo-lib.cjs.production.min.js",
+      "path": "dist/app3.cjs.production.min.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/mbo-lib.esm.js",
+      "path": "dist/app3.esm.js",
       "limit": "10 KB"
     }
   ],
-  "dependencies": {
-    "@rollup/plugin-replace": "^5.0.2",
-    "mbo-utils": "^0.0.8",
-    "mf-core-library-v2": "0.7.69",
-    "prettier": "^3.2.5"
-  },
   "devDependencies": {
     "@size-limit/preset-small-lib": "^11.1.3",
     "@types/react": "^18.3.2",
     "@types/react-dom": "^18.3.0",
-    "autoprefixer": "10.4.13",
-    "cssnano": "5.1.14",
     "husky": "^9.0.11",
-    "postcss-url": "10.1.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "rollup-plugin-postcss": "4.0.2",
-    "sass": "1.57.0",
-    "sass-loader": "10.1.1",
     "size-limit": "^11.1.3",
     "tsdx": "^0.14.1",
     "tslib": "^2.6.2",
