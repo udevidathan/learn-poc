@@ -1,0 +1,9 @@
+.label_item {
+  display: grid;
+  gap: var(--label-item-gap, var(--spacing-1));
+  grid-auto-flow: column;
+  width: fit-content;
+  &.vertical {
+    grid-auto-flow: row;
+  }
+}

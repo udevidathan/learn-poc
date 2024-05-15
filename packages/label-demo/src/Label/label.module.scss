@@ -1,0 +1,210 @@
+:root {
+  // varints
+  --label-fg: var(--color-neutrals-400);
+  --label-fg-name: var(--color-neutrals-400);
+  --label-fg-value: var(--color-neutrals-900);
+  --label-fg-primary: var(--color-primary-600);
+  --label-fg-primary-dark: var(--color-primary-900);
+  --label-fg-primary-light: var(--color-primary-600);
+  --label-fg-action: var(--color-action-500);
+  --label-fg-secondary: var(--color-secondary-500);
+  --label-fg-success: var(--color-success-900);
+  --label-fg-attention: var(--color-attention-900);
+  --label-fg-error: var(--color-error-900);
+  --label-fg-dark: var(--color-neutrals-900);
+  --label-fg-light: var(--color-neutrals-100);
+  --label-fg-white: var(--color-white);
+
+  --label-bg-primary: var(--color-primary-600);
+  --label-bg-primary-dark: var(--color-primary-900);
+  --label-bg-primary-light: var(--color-primary-200);
+  --label-bg-action: var(--color-action-500);
+  --label-bg-secondary: var(--color-secondary-500);
+  --label-bg-success: var(--color-success-900);
+  --label-bg-warning: var(--color-attention-900);
+  --label-bg-error: var(--color-error-900);
+  --label-bg-dark: var(--color-neutrals-900);
+  --label-bg-light: var(--color-neutrals-200);
+  --label-bg-alpha: var(--color-white);
+
+  // label sizes
+  --label-fs-xxs: var(--fs-10);
+  --label-fs-xs: var(--fs-12);
+  --label-fs-sm: var(--fs-14);
+  --label-fs-md: var(--fs-16);
+  --label-fs-lg: var(--fs-18);
+  --label-fs-xl: var(--fs-20);
+  --label-fs-xxl: var(--fs-24);
+  --label-fs: var(--label-fs-xs, 0.75rem);
+  --label-fw: var(--fw-400);
+  --label-gap: var(--spacing-1);
+
+  // Component specific props
+  --label-bg-default: var(--color-neutrals-400);
+  --label-padding: 0px;
+  --label-padding-tag: var(--spacing-1, 0.25rem) var(--spacing-1, 0.25rem);
+  --label-padding-badge: var(--spacing-1, 0.25rem) var(--spacing-3, 0.75rem);
+  --label-padding-chip: var(--spacing-2, 0.5rem) var(--spacing-sub-3, 0.875rem);
+  --label-radius-chip: var(--radius-full, 100000px);
+}
+.label {
+  /* label related variables */
+  --label-radius: var(--radius-sm, 0.125rem);
+
+  --label-bg: transparent;
+
+  /* label related variables */
+
+  display: var(--label-display, inline-flex);
+  gap: var(--label-gap);
+  align-items: center;
+  font-weight: var(--label-fw);
+  color: var(--label-fg);
+  font-size: var(--label-fs);
+  background: var(--label-bg);
+  border-radius: var(--label-radius);
+  padding: var(--label-padding);
+  line-height: var(--label-line-height, var(--label-fs));
+  cursor: var(--label-cursor);
+  &.block {
+    --label-display: flex;
+  }
+  &.name {
+    --label-fg: var(--label-fg-name);
+  }
+  &.value {
+    --label-fg: var(--label-fg-value);
+  }
+
+  &.ellipsis,
+  &.truncate {
+    --label-display: flow-root;
+  }
+  // variants
+  &.primary {
+    --label-fg: var(--label-fg-primary);
+    &__dark {
+      --label-fg: var(--label-fg-primary-dark);
+    }
+    &__light {
+      --label-fg: var(--label-fg-primary-light);
+    }
+  }
+  &.action {
+    --label-fg: var(--label-fg-action);
+  }
+  &.secondary {
+    --label-fg: var(--label-fg-secondary);
+  }
+  &.success {
+    --label-fg: var(--label-fg-success);
+  }
+  &.error {
+    --label-fg: var(--label-fg-error);
+  }
+  &.warning {
+    --label-fg: var(--label-fg-attention);
+  }
+  &.dark {
+    --label-fg: var(--label-fg-dark);
+  }
+  &.light {
+    --label-fg: var(--label-fg-light);
+  }
+  &.white {
+    --label-fg: var(--label-fg-white);
+  }
+  // varinats end here
+
+  &:where(.selected) {
+    --label-fw: var(--fw-500);
+  }
+
+  // sizes classes
+  &.xxs {
+    --label-fs: var(--label-fs-xxs);
+  }
+  &.xs {
+    --label-fs: var(--label-fs-xs);
+  }
+  &.sm {
+    --label-fs: var(--label-fs-sm);
+  }
+  &.md {
+    --label-fs: var(--label-fs-md);
+  }
+  &.lg {
+    --label-fs: var(--label-fs-lg);
+  }
+
+  &.xl {
+    --label-fs: var(--label-fs-xl);
+  }
+  &.xxl {
+    --label-fs: var(--label-fs-xxl);
+  }
+  &:is(.tag, .badge, .chip) {
+    --label-fg: var(--color-white);
+    --label-bg: var(--label-bg-default);
+    --label-padding: var(--label-padding-tag);
+    :is(svg) {
+      --fill-color: var(--color-white);
+    }
+    &:not(.success, .action, .primary, .warning, .dark, .error, .secondary) {
+      --label-bg: var(--label-bg-default);
+    }
+    &:is(.success, .action, .primary, .warning, .dark, .error, .secondary) {
+      --label-fg: var(--color-white);
+    }
+    &.success {
+      --label-bg: var(--label-bg-success);
+    }
+    &.primary {
+      --label-bg: var(--label-bg-primary);
+      &__dark {
+        --label-bg: var(--label-bg-primary-dark);
+      }
+      &__light {
+        --label-bg: var(--label-bg-primary-light);
+        --label-fg: var(--label-fg-primary-light);
+      }
+    }
+    &.action {
+      --label-bg: var(--label-bg-action);
+    }
+
+    &.secondary {
+      --label-bg: var(--label-bg-secondary);
+    }
+
+    &.error {
+      --label-bg: var(--label-bg-error);
+    }
+    &.warning {
+      --label-bg: var(--label-bg-warning);
+    }
+    &.dark {
+      --label-bg: var(--label-bg-dark);
+    }
+    &.light {
+      --label-fg: var(--label-fg-dark);
+      --label-bg: var(--label-bg-light);
+    }
+    &.alpha {
+      --label-fg: var(--label-fg-dark);
+      --label-bg: var(--label-bg-alpha);
+    }
+  }
+  &:is(.badge) {
+    --label-padding: var(--label-padding-badge);
+  }
+  &:is(.chip) {
+    --label-padding: var(--label-padding-chip);
+    --label-radius: var(--label-radius-chip);
+  }
+  // label.tag varint style here
+  &.is_dropdown_open,
+  &[data-dropdown="open"] {
+    --label-fw: var(--fw-500);
+  }
+}
