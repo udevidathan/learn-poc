@@ -1,6 +1,6 @@
 {
   "name": "my-app-2",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "private": false,
   "dependencies": {
     "@babel/core": "^7.16.0",
